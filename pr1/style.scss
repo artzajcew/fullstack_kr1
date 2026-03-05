@@ -1,0 +1,37 @@
+$color1: #bfd5e3;
+$color2: #117a94;
+$font-size: 16px;
+
+@mixin flex-center {
+    align-items: center;
+}
+
+body {
+    background-color: $color1;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.product {
+    @include flex-center;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: $color2;
+    border-radius: 8px;
+    max-width: 600px;
+
+    .name {
+        font-size: $font-size;
+        color: white;
+        margin-right: 10px;
+        font-weight: bold;
+    }
+    
+    .description {
+        font-size: $font-size * 0.875;
+        color: rgba(255, 255, 255, 0.8);
+        margin-top: 10px;
+    }
+
+}
